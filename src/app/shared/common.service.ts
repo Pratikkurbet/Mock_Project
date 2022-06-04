@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Employee } from '../model/employee';
 
 @Injectable({
@@ -10,18 +11,29 @@ export class CommonService {
   url:string="http://localhost:3000/Employee";
   constructor(private httpService:HttpClient) { }
 
-  getAllData()
-  {
-    this.httpService.get(this.url);
+  emp:Employee={
+    id: 0,
+    ename: '',
+    email: '',
+    mobile: '',
+    designation: '',
+    username: '',
+    password: '',
+    repeat_password: ''
   }
 
-  PostData(e:Employee)
+  getAllData():Observable<Employee[]>
   {
-    this.httpService.post(this.url+"/",e);
+     return this.httpService.get<Employee[]>(this.url);
+  }
+
+  PostData(e:Employee):Observable<Employee>
+  {
+    return this.httpService.post<Employee>(this.url + "/", e);
   }
   
   DeleteData(id:number)
   {
-    this.httpService.delete(this.url+"/"+id)
+    return this.httpService.delete(this.url+"/"+id)
   }
 }

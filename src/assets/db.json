@@ -1,22 +1,34 @@
 {
-    "Employee":[
-        {
-            "id":1,
-            "ename":"Pratik",
-            "email":"pratik@gmail.com",
-            "mobile":"98907",
-            "designation":"SDE1",
-            "username":"PK@123",
-            "password":"pk"
-        },
-        {
-            "id":2,
-            "ename":"Akshay",
-            "email":"akshay@gmail.com",
-            "mobile":"98906",
-            "designation":"SDE1",
-            "username":"AK@123",
-            "password":"ak"
-        }
-    ]
+  "Employee": [
+    {
+      "id": 1,
+      "ename": "h",
+      "email": "iuhu",
+      "mobile": "hiuh",
+      "designation": "uh",
+      "username": "iu",
+      "password": "aa",
+      "repeat_password": "aa"
+    },
+    {
+      "id": 2,
+      "ename": "Saurabh",
+      "email": "sk@gmail.com",
+      "mobile": "887766",
+      "designation": "SDE2",
+      "username": "sk@One",
+      "password": "asdf",
+      "repeat_password": "asdf"
+    },
+    {
+      "id": 3,
+      "ename": "Akshay",
+      "email": "ak@gmail.com",
+      "mobile": "776655",
+      "designation": "SDE1",
+      "username": "ak",
+      "password": "ak",
+      "repeat_password": "ak"
+    }
+  ]
 }

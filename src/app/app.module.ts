@@ -10,6 +10,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { EmployeeModule } from './employee/employee.module';
 import { CompanyModule } from './company/company.module';
 import { HttpClientModule } from '@angular/common/http';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HeaderModule } from './header/header.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 console.log("app module runs");
 @NgModule({
@@ -18,12 +22,17 @@ console.log("app module runs");
     DashboardComponent,
     LoginComponent,
     RegistrationComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    GalleryComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HeaderModule
     // EmployeeModule,
     // CompanyModule
   ],

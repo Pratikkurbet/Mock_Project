@@ -1,1 +1,37 @@
-<p>login works!</p>
+<!-- <form [formGroup]="LoginForms" (ngSubmit)="submitCall()">
+    USERNAME:<input type="text" formControlName="username"><br>
+    PASSWORD:<input type="text" formControlName="password"><br>
+ <button type="submit" [disabled]="!LoginForms.valid">Login</button>
+ <button type="button" (click)="reset()">reset</button>
+</form> -->
+<br>
+<br>
+<br>
+<br>
+<h1 style="text-align: center;">Login to Database</h1>
+<form [formGroup]="LoginForms" (ngSubmit)="submitCall()">
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" formControlName="username">
+      <div *ngIf="LoginForms.controls['username'].touched && LoginForms.controls['username'].invalid">
+        <span *ngIf="LoginForms.get('username')!.hasError('required')" style="color: red">Username is Required</span>
+        </div>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" formControlName="password">
+      <div *ngIf="LoginForms.controls['password'].touched && LoginForms.controls['password'].invalid">
+        <span *ngIf="LoginForms.get('password')!.hasError('required')" style="color: red">Password is Required</span>
+        </div>
+  
+      <button type="submit" [disabled]="!LoginForms.valid">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn" (click)="reset()">Cancel</button>
+      <span class="psw">Don't have account <a routerLink="register">Register?</a></span>
+    </div>
+  </form>
+<router-outlet></router-outlet>
