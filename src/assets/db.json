@@ -2,33 +2,23 @@
   "Employee": [
     {
       "id": 1,
-      "ename": "h",
-      "email": "iuhu",
-      "mobile": "hiuh",
-      "designation": "uh",
-      "username": "iu",
-      "password": "aa",
-      "repeat_password": "aa"
-    },
-    {
-      "id": 2,
-      "ename": "Saurabh",
-      "email": "sk@gmail.com",
-      "mobile": "887766",
-      "designation": "SDE2",
-      "username": "sk@One",
+      "ename": "asdf",
+      "email": "asdf",
+      "mobile": "asdf",
+      "designation": "asdf",
+      "username": "asdf",
       "password": "asdf",
       "repeat_password": "asdf"
     },
     {
-      "id": 3,
-      "ename": "Akshay",
-      "email": "ak@gmail.com",
-      "mobile": "776655",
-      "designation": "SDE1",
-      "username": "ak",
-      "password": "ak",
-      "repeat_password": "ak"
+      "id": 2,
+      "ename": "bbb",
+      "email": "bbb",
+      "mobile": "bbb",
+      "designation": "bbb",
+      "username": "bbb",
+      "password": "bbb",
+      "repeat_password": "bbb"
     }
   ]
 }

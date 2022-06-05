@@ -1,0 +1,31 @@
+html{height:100%;}
+body{
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;;
+  background: rgb(34,193,195);
+  background: linear-gradient(130deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+.login-wrap{
+  position:absolute;
+  left:50%;
+  margin-left:-33px;
+  top:50%;
+  margin-top:-30px;
+}
+.login-form{
+  position:absolute;
+  top:1%;
+  left:50%;
+  margin-left:-225px;
+  width:450px;
+  visibility:hidden;
+  opacity: 0;
+}
+.login-form:target{
+  top:20%;
+  visibility: visible;
+  opacity: 1;
+  transition:all 1s ease;
+}

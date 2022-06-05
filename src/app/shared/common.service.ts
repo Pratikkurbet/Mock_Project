@@ -36,4 +36,9 @@ export class CommonService {
   {
     return this.httpService.delete(this.url+"/"+id)
   }
+
+  patchData(e:Employee):Observable<Employee>
+  {
+    return this.httpService.put<Employee>(this.url+e.id,e)
+  }
 }

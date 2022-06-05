@@ -41,6 +41,7 @@ export class RegistrationComponent implements OnInit {
       e.password=this.RegistrationForm.get('password').value;
       alert('Employee Registered.');
       this.common.PostData(e).subscribe();
+      // window.location.reload();
       this.router.navigate(['login']);
     } 
     else

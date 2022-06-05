@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   LoginForms:FormGroup
 
   empList:Employee[];
+  emp:Employee;
   ngOnInit(): void
   {
     this.LoginForms=this.formbuilder.group({
@@ -26,9 +27,22 @@ export class LoginComponent implements OnInit {
   
   submitCall()
   {
-    console.log(this.LoginForms.get('username').value);
-    console.log(this.LoginForms.get('password').value);
-    this.router.navigate(['login/header']);
+    this.common.getAllData().subscribe
+    (abc=>
+      abc.forEach(x =>
+      {
+        if (x.username===this.LoginForms.get('username').value && x.password===this.LoginForms.get('password').value)
+        {
+          this.emp==x;
+          this.router.navigate(['login/header']);
+        }
+      })
+    );
+    // if(this.emp==null)
+    // {
+    //   alert('Employee not found');
+    //   window.location.reload();
+    // }
   }
 
   reset()
@@ -36,3 +50,4 @@ export class LoginComponent implements OnInit {
     this.LoginForms.reset();
   }
 }
+
