@@ -24,7 +24,7 @@ export class RegistrationComponent implements OnInit {
         mobile:[''],
         designation:[''],
         username:[''],
-        password_repeat:[''],
+        // password_repeat:[''],
         password:['']
       }
     )
@@ -37,20 +37,20 @@ export class RegistrationComponent implements OnInit {
     e.mobile=this.RegistrationForm.get('mobile').value;
     e.designation=this.RegistrationForm.get('designation').value;
     e.username=this.RegistrationForm.get('username').value;
-    if ((this.RegistrationForm.get('password').value)===(this.RegistrationForm.get('password_repeat').value))
-    {
+    // if ((this.RegistrationForm.get('password').value)===(this.RegistrationForm.get('password_repeat').value))
+    // {
       e.password=this.RegistrationForm.get('password').value;
       alert('Employee Registered.');
       this.common.PostData(e).subscribe();
       // window.location.reload();
       this.router.navigate(['login']);
-    } 
-    else
-    {
-      alert('Set your Password correctly!');
-      this.router.navigate(['register']);
-      window.location.reload();
-    }
+    // } 
+    // else
+    // {
+    //   alert('Set your Password correctly!');
+    //   this.router.navigate(['register']);
+    //   window.location.reload();
+    // }
   }
   callToLogin()
   {

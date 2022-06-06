@@ -21,7 +21,7 @@ export class EmployeeComponent implements OnInit {
     mobile: '',
     designation: '',
     username: '',
-    repeat_password: '',
+    // repeat_password: '',
     password: ''
   }
   ngOnInit(): void 

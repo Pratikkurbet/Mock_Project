@@ -6,6 +6,6 @@ export class Employee
     mobile:string;
     designation:string;
     username:string;
-    repeat_password:string;
+    //repeat_password:string;
     password:string;
 }

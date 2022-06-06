@@ -28,6 +28,15 @@
       "designation": "SDE1",
       "username": "pk@dev",
       "password": "pk"
+    },
+    {
+      "id": 4,
+      "ename": "AKSHAY",
+      "email": "AK@712",
+      "mobile": "887766",
+      "designation": "SDE",
+      "username": "ak@sde",
+      "password": "ak@sde"
     }
   ]
 }

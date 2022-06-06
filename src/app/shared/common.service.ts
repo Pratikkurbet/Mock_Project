@@ -19,7 +19,7 @@ export class CommonService {
     designation: '',
     username: '',
     password: '',
-    repeat_password: ''
+    // repeat_password: ''
   }
 
   getAllData():Observable<Employee[]>
