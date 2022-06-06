@@ -19,6 +19,15 @@
       "username": "bbb",
       "password": "bbb",
       "repeat_password": "bbb"
+    },
+    {
+      "id": 3,
+      "ename": "Pratik Kurbet",
+      "email": "pratikkurbet02@gmail.com",
+      "mobile": "997088",
+      "designation": "SDE1",
+      "username": "pk@dev",
+      "password": "pk"
     }
   ]
 }

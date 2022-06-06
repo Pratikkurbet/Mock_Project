@@ -1,3 +1,33 @@
 <p>employee works!</p>
-<button routerLink="emplist">Employee List</button>
+<!-- <button routerLink="emplist">Employee List</button> -->
+<div class="col-md-6">
+    <div class="container1">
+        <table class="table table-striped">
+          <tbody >
+            <th>ID</th>
+            <th>NAME</th>
+            <th>UNAME</th>
+            <th>PASSWORD</th>
+            <th></th>
+            <th>Update</th>
+            <th>Delete</th>
+            <tr *ngFor="let e of empList">
+              <td>{{e.id}}</td>
+              <td>{{e.ename}}</td>
+              <td>{{e.username}}</td>
+              <td>{{e.password}}</td>
+              <td><a [routerLink]="['emplist',e.id]" class="btn">ShowDetails</a></td>
+              <td><a class="btn" [routerLink]="['empUpdate']" [state]="e">
+                <i class="fa fa-edit"></i>
+              </a>
+              </td>
+              <td><a class="btn" (click)="deleteData(e.id)">
+                <i class="fa fa-trash"></i>
+              </a>
+              </td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+    </div>
 <router-outlet></router-outlet>

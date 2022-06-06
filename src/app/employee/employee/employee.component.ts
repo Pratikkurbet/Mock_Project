@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from 'src/app/model/employee';
+import { CommonService } from 'src/app/shared/common.service';
 
 @Component({
   selector: 'app-employee',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public common:CommonService) { }
 
-  ngOnInit(): void {
+  empList:Employee[];
+  showDiv:boolean=false;
+
+  emp1:Employee={
+    id: 0,
+    ename: '',
+    email: '',
+    mobile: '',
+    designation: '',
+    username: '',
+    repeat_password: '',
+    password: ''
   }
-
+  ngOnInit(): void 
+  {
+    this.common.getAllData().subscribe((data:Employee[])=>
+    {
+      this.empList=data;
+    })
+  }
+  deleteData(id:number)
+  {
+    this.common.DeleteData(id).subscribe();
+    window.location.reload();
+  }
 }

@@ -1,74 +1,31 @@
 <p>employee-list works!</p>
-<div class="row">
-<div class="col-md-6">
-<div class="container1">
-    <table class="table table-striped">
-      <tbody >
-        <th>ID</th>
-        <th>NAME</th>
-        <th>UNAME</th>
-        <th>PASSWORD</th>
-        <th>Update</th>
-        <th>Delete</th>
-        <tr *ngFor="let e of empList">
-          <td>{{e.id}}</td>
-          <td>{{e.ename}}</td>
-          <td>{{e.username}}</td>
-          <td>{{e.password}}</td>
-          <td><a class="btn" (click)="editEmployeeCall(e)">
-            <i class="fa fa-edit"></i>
-          </a>
-          </td>
-          <td><a class="btn" (click)="deleteData(e.id)">
-            <i class="fa fa-trash"></i>
-          </a>
-          </td>
-          </tr>
-      </tbody>
+<div class="jumbotron"style="text-align:center" >
+    <table class="table table-dark center " style="text-align:center" >
+    <tr>
+    <td> Name</td>
+    <td> <input type="text"value={{employee.ename}}></td>
+    </tr>
+    <tr>
+    <td> Email</td>
+    <td> <input type="text" value={{employee.email}}></td>
+    </tr>
+    <tr>
+    <td> Mobile</td>
+    <td> <input type="text" value={{employee.mobile}}></td>
+    </tr>
+    <tr>
+    <td> Designation</td>
+    <td> <input type="text" value={{employee.designation}}></td>
+    </tr>
+    <tr>
+    <td> Username</td>
+    <td> <input type="text" value={{employee.username}}></td>
+    </tr>
+    <tr>
+    <td> password</td>
+    <td> <input type="text" value={{employee.password}}></td>
+    </tr>
     </table>
-</div>
-</div>
-
-<div *ngIf="showDiv" class="col-md-6">
-  <div class="container2">  
-      
-      <div class="card login-form" id="update">
-        <div class="card-body">
-      
-        <div class="form-group">
-          <label for="Employee Name">Employee Name</label>
-          <input type="text" class="form-control" id="Employee Name" [(ngModel)]="common.emp.ename">
-        </div>
-
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="common.emp.email">
-        </div>
-
-        <div class="form-group">
-          <label for="Employee Contact">Mobile Number</label>
-          <input type="text" class="form-control" id="Employee Contact" [(ngModel)]="common.emp.mobile">
-        </div>
-
-        <div class="form-group">
-          <label for="Employee Designation">Designation</label>
-          <input type="text" class="form-control" id="Employee Designation" [(ngModel)]="common.emp.designation">
-        </div>
-
-        <div class="form-group">
-          <label for="Employee Username">Username</label>
-          <input type="text" class="form-control" id="Employee Username" [(ngModel)]="common.emp.username">
-        </div>
-
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="common.emp.password">
-        </div>
-        <button type="submit" class="btn btn-primary" (click)="updateEmployee(emp)">Update</button>
-      
-        </div>
-      </div><!-- /.card -->  
-        
-      </div><!-- /.container -->
-  </div>  
-</div>
+    <button class="btn btn-info float-right" (click)="getback()">Go Back</button>
+ </div>
+ <router-outlet></router-outlet>

@@ -39,6 +39,10 @@ export class CommonService {
 
   patchData(e:Employee):Observable<Employee>
   {
-    return this.httpService.put<Employee>(this.url+e.id,e)
+    return this.httpService.put<Employee>(this.url+"/"+e.id,e)
+  }
+  getEmployee(id:number):Observable<Employee>
+  {
+    return this.httpService.get<Employee>(this.url+"/"+id);
   }
 }
