@@ -2,13 +2,12 @@
   "Employee": [
     {
       "id": 1,
-      "ename": "asdf",
-      "email": "asdf",
-      "mobile": "asdf",
-      "designation": "asdf",
-      "username": "asdf",
-      "password": "asdf",
-      "repeat_password": "asdf"
+      "ename": "Pratik",
+      "email": "pratikkurbet02@gmail.com",
+      "mobile": "99887766",
+      "designation": "SDE1",
+      "username": "pk@dev",
+      "password": "pk"
     },
     {
       "id": 2,

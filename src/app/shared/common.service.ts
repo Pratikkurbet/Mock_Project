@@ -8,7 +8,14 @@ import { Employee } from '../model/employee';
 })
 export class CommonService {
 
-  url:string="http://localhost:3000/Employee";
+  //url:string="http://localhost:3000/Employee";
+
+  addUrl:string="http://localhost:8083/addEmp";
+  getAllUrl:string="http://localhost:8083/list";
+  getEmpUrl:string="http://localhost:8083/singleEmp/";
+  deleteUrl:string="http://localhost:8083/delete/";
+  updateUrl:string="http://localhost:8083/update";
+  commonUrl:string="http://localhost:8083/";
   constructor(private httpService:HttpClient) { }
 
   emp:Employee={
@@ -24,25 +31,25 @@ export class CommonService {
 
   getAllData():Observable<Employee[]>
   {
-     return this.httpService.get<Employee[]>(this.url);
+     return this.httpService.get<Employee[]>(this.getAllUrl);
   }
 
   PostData(e:Employee):Observable<Employee>
   {
-    return this.httpService.post<Employee>(this.url + "/", e);
+    return this.httpService.post<Employee>(this.addUrl + "/", e);
   }
   
   DeleteData(id:number)
   {
-    return this.httpService.delete(this.url+"/"+id)
+    return this.httpService.delete(this.deleteUrl+id)
   }
 
   patchData(e:Employee):Observable<Employee>
   {
-    return this.httpService.put<Employee>(this.url+"/"+e.id,e)
+    return this.httpService.put<Employee>(this.updateUrl,e)
   }
   getEmployee(id:number):Observable<Employee>
   {
-    return this.httpService.get<Employee>(this.url+"/"+id);
+    return this.httpService.get<Employee>(this.getEmpUrl+"/"+id);
   }
 }
